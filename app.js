@@ -10,6 +10,7 @@ audio.load()
 var state = false
 
 
+
 $('.button').onclick = function () {
     if (state = !state) {
         audio.play()
@@ -24,6 +25,7 @@ $('.button').onclick = function () {
         $('.button img:nth-child(2)').src = './play.png'
         $('.button img:nth-child(2)').classList.remove('change')
         $('.wave').classList.remove('clap')
+      
         play = false
         audio.pause()
     }
@@ -49,6 +51,13 @@ function analysis() {
         platform.style.width = `${dataArray[64]*2}px`;
         if(i%100==0)
             platform.style.background = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},0.7)`
+        if(audio.currentTime>=audio.duration){
+            $('.button img').classList.remove('play')
+            $('.button img:nth-child(2)').src = './play.png'
+            $('.button img:nth-child(2)').classList.remove('change')
+            $('.wave').classList.remove('clap')
+        }
     }
     render()
+    console.log('hello')
 }
