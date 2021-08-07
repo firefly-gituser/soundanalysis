@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.plaform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plaform button {
+    border: none;
+    outline: none;
+    display: block;
+    border-radius: 50%;
+    transition: all linear 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 200px;
+    max-height: 200px;
+    transition: all linear 0.2s;
+    position: relative;
+}
+
+.plaform button img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+    color: rgb(34, 53, 70);
+}
+
+.plaform button img:nth-child(2) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    display: none;
+    transition: all linear 0.5s;
+}
+
+.plaform button:hover img:nth-child(2) {
+    display: inline-block;
+}
+
+.plaform button img.play {
+    animation: scroll 5s 0s infinite linear backwards;
+}
+
+.plaform button img.change {
+    transform: rotate(180deg);
+}
+
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(176, 224, 230, 0.637);
+    border-radius: 50%;
+}
+
+.clap {
+    animation: slide 1.2s 0s infinite backwards;
+}
+
+@keyframes slide {
+    to {
+        width: 60vh;
+        height: 60vh;
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: rotate(360deg);
+    }
+}
