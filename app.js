@@ -3,7 +3,7 @@ const $ = document.querySelector.bind(document)
 
 const platform = $('.plaform')
 
-var audio = new Audio('https://firefly-gituser.github.io/soundanalysis/Roi_Toi_Luon_Nal.mp3')
+var audio = new Audio('./Roi_Toi_Luon_Nal.mp3')
 audio.crossOrigin = "anonymous"
 audio.load()
 
