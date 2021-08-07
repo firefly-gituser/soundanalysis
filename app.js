@@ -56,6 +56,7 @@ function analysis() {
             $('.button img:nth-child(2)').src = './play.png'
             $('.button img:nth-child(2)').classList.remove('change')
             $('.wave').classList.remove('clap')
+            return
         }
     }
     render()
